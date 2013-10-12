@@ -1,1 +1,1 @@
-web: python VillaMariaPizza/manage.py runserver 0:$PORT
+web: python QuickStart/manage.py runserver 0:$PORT

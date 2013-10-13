@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -14,4 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    
+    # Static files
+    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
+    url(r'^Sitemap\.xml$', TemplateView.as_view(template_name='Sitemap.xml', content_type='text/xml')),
 )

@@ -176,3 +176,5 @@ LOGGING = {
 
 # Import the correct settings file
 ENVIRONMENT = environ.get('ENVIRONMENT', 'local')
+
+exec('from %s import *' % ENVIRONMENT)

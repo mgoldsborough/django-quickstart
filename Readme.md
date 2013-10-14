@@ -36,8 +36,19 @@ Update application settings:
 
 Update references to QuickStart:
 
-* QuickStart and QuickStart/QuickStart folder
+
+* QuickStart and QuickStart/QuickStart folders
+* Procfile
+
+```
+web: python YourAwesomeApp/manage.py runserver 0:$PORT
+```
+
 * QuickStart.settings.common in wsgi.py
+
+```
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "YourAwesomeApp.settings.common")
+```
 * ROOT_URLCONF, WSGI_APPLICATION, LOGGING in QuickStart/settings/common.py
 
 Fire that puppy up:
